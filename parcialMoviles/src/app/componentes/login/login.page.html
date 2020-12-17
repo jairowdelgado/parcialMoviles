@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center >Inicio de sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img class="icon" src="assets/icon/icono.jpg" alt="">
+<ion-item>
+  <ion-label position="floating"> Usuario  </ion-label>
+  <ion-input type="text" [(ngModel)]="usuario" name="usuario"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating"> Contraseña  </ion-label>
+  <ion-input type="password" [(ngModel)]="contrasenia" name="contrasenia"></ion-input>
+</ion-item>
+<br><br><br>
+<ion-button (click)="iniciarSesion()" expand="block">Iniciar sesion</ion-button>
+
+</ion-content>
