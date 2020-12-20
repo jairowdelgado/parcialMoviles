@@ -2,7 +2,7 @@ import { stringify } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/auth"
 import { rejects } from 'assert';
-import { resolve } from 'dns';
+// import { resolve } from 'dns';
 import { LoginPage } from '../componentes/login/login.page';
 
 @Injectable({

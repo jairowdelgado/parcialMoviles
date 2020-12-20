@@ -10,18 +10,25 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {firebaseConfig} from "../environments/environment";
-
 import {AngularFireModule} from "@angular/fire";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import {AngularFireAuthModule} from "@angular/fire/auth";
+
+import * as firebase from 'firebase';
 
 @NgModule({
 
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-  AngularFireModule.initializeApp(firebaseConfig),
-  AngularFireAuthModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

@@ -8,33 +8,33 @@
   <img class="icon" src="assets/icon/icono.jpg" alt="">
 <ion-item>
   <ion-label position="floating"> Id Referencia  </ion-label>
-  <ion-input type="text" nam="idreferencia"></ion-input>
+  <ion-input type="text" nam="idreferencia" [(ngModel)]="ref.idreferencia" ></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Titulo publicacion </ion-label>
-  <ion-input type="text" name="tituloPublica"></ion-input>
+  <ion-input type="text" name="tituloPublica" [(ngModel)]="ref.titulopub"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Autores </ion-label>
-  <ion-input type="text" name="autores"></ion-input>
+  <ion-input type="text" name="autores" [(ngModel)]="ref.autores"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Tipo publicacion </ion-label>
-  <ion-input type="text" name="tipoPublica"></ion-input>
+  <ion-input type="text" name="tipoPublica" [(ngModel)]="ref.tipopub"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Nombre evento/ revista </ion-label>
-  <ion-input type="text" name="nombreEvento"></ion-input>
+  <ion-input type="text" name="nombreEvento" [(ngModel)]="ref.eventorevista"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Doi </ion-label>
-  <ion-input type="text" name="doi"></ion-input>
+  <ion-input type="text" name="doi" [(ngModel)]="ref.doi"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Año publicacion </ion-label>
-  <ion-input type="text" name="anioPublica"></ion-input>
+  <ion-input type="text" name="anioPublica" [(ngModel)]="ref.anyopub"></ion-input>
 </ion-item>
 <br>
-<ion-button expand="block">Registrar referencia</ion-button>
+<ion-button (click)="registrar()" expand="block">Registrar referencia</ion-button>
 
 </ion-content>

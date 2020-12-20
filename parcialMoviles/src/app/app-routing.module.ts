@@ -20,15 +20,19 @@ const routes: Routes = [
     loadChildren: () => import('./componentes/registrar-referencia/registrar-referencia.module').then( m => m.RegistrarReferenciaPageModule)
   },
   {
+    path: 'registrar-referencia/:id',
+    loadChildren: () => import('./componentes/registrar-referencia/registrar-referencia.module').then( m => m.RegistrarReferenciaPageModule)
+  },
+  {
     path: 'eliminar-referencia',
     loadChildren: () => import('./componentes/eliminar-referencia/eliminar-referencia.module').then( m => m.EliminarReferenciaPageModule)
   },
   {
-    path: 'ver-referencia',
+    path: 'ver-referencia/:id',
     loadChildren: () => import('./componentes/ver-referencia/ver-referencia.module').then( m => m.VerReferenciaPageModule)
   },
   {
-    path: 'editar-referencia',
+    path: 'editar-referencia/:id',
     loadChildren: () => import('./componentes/editar-referencia/editar-referencia.module').then( m => m.EditarReferenciaPageModule)
   },
 ];

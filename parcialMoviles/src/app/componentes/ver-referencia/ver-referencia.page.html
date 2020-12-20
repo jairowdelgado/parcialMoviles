@@ -8,9 +8,16 @@
 
   <img class="icon" src="assets/icon/icono.jpg" alt="">
   <ion-item>
-    <ion-label position="floating"> Id Referencia  </ion-label>
+    <ion-label position="floating">Titulo: {{ref.titulopub}}</ion-label>
+    <ion-label position="floating">Número de referencia: {{ref.idreferencia}}</ion-label>
+    <ion-label position="floating">Autores:  {{ref.autores}}</ion-label>
+    <ion-label position="floating">Tipo de publicación: {{ref.tipopub}}</ion-label>
+    <ion-label position="floating">Revista:  {{ref.eventorevista}}</ion-label>
+    <ion-label position="floating">Código del documento: {{ref.doi}}</ion-label>
+    <ion-label position="floating">Año de publicación: {{ref.anyopub}}</ion-label>
     <ion-input type="text" nam="idreferencia"></ion-input>
-    <ion-button >Buscar</ion-button>
+    <ion-button button [routerLink]="['/registrar-referencia', ref.id]" >Editar</ion-button>
+    <ion-button (click)="eliminar()">Eliminar</ion-button>
   </ion-item>
   
 </ion-content>
