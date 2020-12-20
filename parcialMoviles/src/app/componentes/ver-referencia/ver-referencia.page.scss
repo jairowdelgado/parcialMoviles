@@ -4,3 +4,41 @@
     margin-right: auto;
     width: 20%;
 }
+
+.inicio{
+    text-align: center;
+    text-size-adjust: inherit;
+
+}
+.bod{
+    height: 100%;
+}
+
+.boton{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    width: 48%;
+    height: 15%;
+}
+.boton2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    width: 48%;
+    height: 15%;
+}
+.boton:hover {
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    border-color:white;
+    
+}
+.boton2:hover {
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    border-color:white;
+    
+}

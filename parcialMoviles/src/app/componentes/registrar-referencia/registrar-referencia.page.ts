@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReferenciaService } from '../../servicios/referencia.service';
 import { Referencia, ReferenciaPush } from '../../models/referencia';
 import { ActivatedRoute } from '@angular/router'
-import { Console } from 'console';
+//import { Console } from 'console';
 
 
 @Component({

@@ -4,3 +4,23 @@
     margin-right: auto;
     width: 30%;
 }
+
+.inicio{
+    text-align: center;
+    text-size-adjust: inherit;
+
+}
+
+.boton{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+}
+.boton:hover {
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    border-color:white;
+    
+}
