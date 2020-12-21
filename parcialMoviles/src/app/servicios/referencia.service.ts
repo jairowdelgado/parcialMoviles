@@ -29,7 +29,7 @@ export class ReferenciaService {
     return this.db.doc(this.nameRef + '/' + id).get()
   }
 
-  putReferencia(referencia: Referencia, id: string){
+  putReferencia(referencia: ReferenciaPush, id: string){
     // return this.referenciasCollection.doc(id).update(referencia);
     return this.db.doc(this.nameRef + '/' + id).update(referencia);
   }

@@ -2,6 +2,8 @@ import { importType } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Referencia } from '../models/referencia';
 import { ReferenciaService } from '../servicios/referencia.service';
+import { AutenticacionService } from '../servicios/autenticacion.service';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-home',
@@ -14,9 +16,15 @@ export class HomePage implements OnInit{
 
   list = []
 
-  constructor(private RefService: ReferenciaService) {}
+  constructor(private RefService: ReferenciaService, private aut: AutenticacionService, private router: Router) {}
 
   ngOnInit(){
+
+    if(this.aut.getToken() == null){
+      this.router.navigate(['/login']);
+      alert('¡Debes iniciar sesión primero!')
+    }else{
+
     this.RefService.getReferencias().subscribe(
       data => {
         this.list = data.map(e =>{
@@ -32,11 +40,11 @@ export class HomePage implements OnInit{
             anyopub: e.payload.doc.data()['anyopub']
           };
         })
-        console.log(this.list)
         this.RefService.list = this.list;
       }
     )
-    
+
+    }
   }
 
 }

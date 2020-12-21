@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'editar-referencia/:id',
     loadChildren: () => import('./componentes/editar-referencia/editar-referencia.module').then( m => m.EditarReferenciaPageModule)
   },
+  {
+    path: '**',
+    redirectTo: 'login',
+  }
 ];
 
 @NgModule({

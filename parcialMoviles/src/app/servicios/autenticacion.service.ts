@@ -19,5 +19,17 @@ export class AutenticacionService {
       })
       
     }
-  
+ 
+  public setToken(token){
+    localStorage.setItem('token', token);
+  }
+
+  public getToken(){
+    return localStorage.getItem('token');
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+  }
+
 }

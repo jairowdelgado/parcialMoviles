@@ -12,14 +12,18 @@ export class LoginPage implements OnInit {
   usuario:string;
   contrasenia:string;
 
-  constructor(private autenticacionService : AutenticacionService, public roter: Router) { }
+  constructor(private autenticacionService : AutenticacionService, public router: Router) { }
 
   ngOnInit() {
+    if(this.autenticacionService.getToken() != null ){
+      this.router.navigate(['/home'])
+    }
   }
 
   iniciarSesion(){
     this.autenticacionService.login(this.usuario,this.contrasenia).then(res =>{
-      this.roter.navigate(['/home']);
+      this.autenticacionService.setToken("sesiónActiva");
+      this.router.navigate(['/home']);
     }).catch(err => alert('Las credenciales son incorrectas o no coinciden'))
   }
 
